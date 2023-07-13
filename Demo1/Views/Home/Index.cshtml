@@ -1,0 +1,40 @@
+﻿@model  List<Student>
+@using Demo1.Models
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <p><a href="/home/addedit" class="btn btn-primary btn-md">Create</a></p>
+    </section>
+
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gendar</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Age</td>
+                        <td>@item.gender</td>
+                        <td>
+                            <a href="/home/addedit/@item.Id" class="btn btn-primary btn-md">Edit</a>
+                            <a href="/home/delete/@item.Id" class="btn btn-danger btn-md">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
