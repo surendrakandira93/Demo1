@@ -1,0 +1,42 @@
+﻿@model  List<Demo1.Models.EmployeeDto>
+@using Demo1.Models
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <p><a href="/Emp/addedit" class="btn btn-primary btn-md">Create</a></p>
+    </section>
+
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Dob</th>
+                    <th>Gendar</th>
+                    <th>IsActive</th>
+                    <th>Department</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.DOB</td>
+                        <td>@item.Gender</td>
+                        <td>
+                            <a href="/Emp/addedit/@item.Id" class="btn btn-primary btn-md">Edit</a>
+                            <a href="/Emp/delete/@item.Id" class="btn btn-danger btn-md">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
