@@ -7,41 +7,41 @@ using System.Web.Mvc;
 
 namespace Demo1.Controllers
 {
-    public class EmpController : Controller
+    public class DepartmentController : Controller
     {
         public ActionResult Index()
         {
-            var allItem = Empdblist.GetAll();
+            var allItem = Departmentlist.GetAll();
             return View(allItem);
         }
 
-      
+
         [HttpGet]
         public ActionResult addEdit(int? id)
 
         {
-            EmployeeDto EmployeeDto = new EmployeeDto();
+            Department Department = new Department();
             if (id.HasValue)
             {
-                EmployeeDto = Empdblist.GetById(id.Value);
+                Department = Departmentlist.GetById(id.Value);
 
             }
 
 
 
-            return View(EmployeeDto);
+            return View(Department);
         }
         [HttpPost]
-        public ActionResult addEdit(EmployeeDto model)
+        public ActionResult addEdit(Department model)
 
         {
             if (model.Id == 0)
             {
-                Empdblist.Add(model);
+                Departmentlist.Add(model);
             }
             else
             {
-                Empdblist.Update(model.Id, model);
+                Departmentlist.Update(model.Id, model);
             }
             return RedirectToAction("Index");
         }
@@ -51,7 +51,7 @@ namespace Demo1.Controllers
 
             if (id.HasValue)
             {
-                Empdblist.Delete(id.Value);
+                Departmentlist.Delete(id.Value);
 
 
             }

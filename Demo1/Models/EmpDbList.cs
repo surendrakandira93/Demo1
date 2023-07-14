@@ -15,7 +15,7 @@ namespace Demo1.Models
             {
                 Name = "Surendra",
                 Id = 1,
-                DOB=
+                DOB=new DateTime(1997,8,15),
                 Gender= "female",
                 IsActive= true, 
                 Department= "java"
@@ -26,10 +26,7 @@ namespace Demo1.Models
             {
                 Name = "Mohini",
                 Id = 2,
-                
-                
-
-                 DOB =
+                 DOB =new DateTime(2026,9,17),
                 Gender = "female",
                 IsActive = true,
                 Department = "java"
