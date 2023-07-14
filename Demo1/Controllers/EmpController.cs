@@ -15,11 +15,13 @@ namespace Demo1.Controllers
             return View(allItem);
         }
 
-      
+
         [HttpGet]
         public ActionResult addEdit(int? id)
 
         {
+            ViewBag.departments = Departmentlist.GetAll();
+
             EmployeeDto EmployeeDto = new EmployeeDto();
             if (id.HasValue)
             {

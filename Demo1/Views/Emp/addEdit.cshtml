@@ -43,7 +43,7 @@
         </tr>
         <tr>
             <td>Department</td>
-            <td>@Html.DropDownListFor(m => m.Department,new SelectList(new[] {"HR","CEO","Manager","Accountant"}))</td>
+            <td>@Html.DropDownListFor(m => m.Department,new SelectList(ViewBag.departments,"Name","Name"))</td>
             
             
 
