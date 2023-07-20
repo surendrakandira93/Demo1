@@ -11,7 +11,11 @@ namespace Demo1.Controllers
     {
         public ActionResult Index()
         {
+            
             var allItem = Empdblist.GetAll();
+            allItem.ForEach(x => {
+                x.DepartmentName = Departmentlist.GetById(x.Department).Name;
+            });
             return View(allItem);
         }
 

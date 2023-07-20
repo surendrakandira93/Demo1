@@ -28,7 +28,7 @@
         </tr>
         <tr>
             <td>IsActive</td>
-            <td>@Html.TextBoxFor(m => m.IsActive, new { @class = "form-control" })</td>
+            <td>@Html.CheckBoxFor(m => m.IsActive, new { @class = "form-" })</td>
 
 
         </tr>
@@ -43,7 +43,7 @@
         </tr>
         <tr>
             <td>Department</td>
-            <td>@Html.DropDownListFor(m => m.Department,new SelectList(ViewBag.departments,"Name","Name"))</td>
+            <td>@Html.DropDownListFor(m => m.Department,new SelectList(ViewBag.departments,"id","Name"))</td>
             
             
 

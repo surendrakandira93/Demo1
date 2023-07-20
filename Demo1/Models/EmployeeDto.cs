@@ -11,7 +11,8 @@ namespace Demo1.Models
         public string Name { get; set; }    
         public DateTime DOB { get; set; } 
         public string Gender { get; set; }
-        public string Department { get; set; } 
+        public int Department { get; set; }
+        public string DepartmentName { get; set; }
         public bool IsActive { get; set; } 
     }
 }

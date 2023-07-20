@@ -18,7 +18,7 @@ namespace Demo1.Models
                 DOB=new DateTime(1997,8,15),
                 Gender= "female",
                 IsActive= true, 
-                Department= "java"
+                Department= 1
 
             });
 
@@ -29,7 +29,7 @@ namespace Demo1.Models
                  DOB =new DateTime(2026,9,17),
                 Gender = "female",
                 IsActive = true,
-                Department = "java"
+                Department = 2
             });
         }
         public static void Add(EmployeeDto EmployeeDto)
