@@ -1,0 +1,38 @@
+﻿@model  List<Demo1.Models.State>
+@using Demo1.Models
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <p><a href="/State/addedit" class="btn btn-primary btn-md">Create</a></p>
+    </section>
+
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+
+                        <td>
+                            <a href="/State/addedit/@item.Id" class="btn btn-primary btn-md">Edit</a>
+                            <a href="/State/delete/@item.Id" class="btn btn-danger btn-md">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>

@@ -1,0 +1,50 @@
+﻿@model Demo1.Models.City
+@{
+    ViewBag.Title = "addEdit";
+}
+
+<h2>AddEdit</h2>
+
+
+<form action="/City/AddEdit" method="post" enctype="multipart/form-data">
+
+
+    <table>
+
+        <tr>
+
+            <td>@Html.HiddenFor(m => m.Id)</td>
+
+        </tr>
+        <tr>
+            <td>State</td>
+            <td>@Html.DropDownListFor(m => m.StateId, new SelectList(ViewBag.state, "id", "Name"))</td>
+
+
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@Html.TextBoxFor(m => m.Name, new { @class = "form-control" })</td>
+
+
+        </tr>
+
+        <tr>
+            <td>
+
+                <button class="btn btn-primary" type="submit">Submit</button>
+
+
+
+            </td>
+            <td>
+                <a class="btn btn-secondary" href="/City/index">Back to Home</a>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+</form>

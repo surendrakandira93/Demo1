@@ -36,16 +36,30 @@
             <td>Gender</td>
             <td>
                 @Html.RadioButtonFor(m => m.Gender, "Male")<text>Male</text>
-                        @Html.RadioButtonFor(m => m.Gender, "Female")<text>Female</text>
-                    </td>
+                @Html.RadioButtonFor(m => m.Gender, "Female")<text>Female</text>
+            </td>
 
 
         </tr>
         <tr>
             <td>Department</td>
-            <td>@Html.DropDownListFor(m => m.Department,new SelectList(ViewBag.departments,"id","Name"))</td>
-            
-            
+            <td>@Html.DropDownListFor(m => m.Department, new SelectList(ViewBag.departments, "id", "Name"))</td>
+
+
+
+        </tr>
+        <tr>
+            <td>State</td>
+            <td>@Html.DropDownListFor(m => m.state, new SelectList(ViewBag.state, "id", "Name"))</td>
+
+
+
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>@Html.DropDownListFor(m => m.city, new SelectList(ViewBag.city, "id", "Name"))</td>
+
+
 
         </tr>
         <tr>

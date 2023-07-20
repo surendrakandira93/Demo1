@@ -127,17 +127,23 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CityController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmpController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StateController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\CityList.cs" />
     <Compile Include="Models\DBList.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\DepartmentList.cs" />
     <Compile Include="Models\EmpDbList.cs" />
     <Compile Include="Models\EmployeeDto.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Models\StateList.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -197,9 +203,14 @@
     <Content Include="Views\Emp\Index.cshtml" />
     <Content Include="Views\Department\Index.cshtml" />
     <Content Include="Views\Department\addEdit.cshtml" />
+    <Content Include="Views\State\Index.cshtml" />
+    <Content Include="Views\State\addEdit.cshtml" />
+    <Content Include="Views\City\Index.cshtml" />
+    <Content Include="Views\City\addEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

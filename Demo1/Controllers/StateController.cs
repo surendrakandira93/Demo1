@@ -7,15 +7,11 @@ using System.Web.Mvc;
 
 namespace Demo1.Controllers
 {
-    public class EmpController : Controller
+    public class StateController : Controller
     {
         public ActionResult Index()
         {
-            
-            var allItem = Empdblist.GetAll();
-            allItem.ForEach(x => {
-                x.DepartmentName = Departmentlist.GetById(x.Department).Name;
-            });
+            var allItem = StateLIst.GetAll();
             return View(allItem);
         }
 
@@ -24,32 +20,28 @@ namespace Demo1.Controllers
         public ActionResult addEdit(int? id)
 
         {
-            ViewBag.departments = Departmentlist.GetAll();
-            ViewBag.state = StateLIst.GetAll();
-            ViewBag.city = Citylist.GetAll();
-
-            EmployeeDto EmployeeDto = new EmployeeDto();
+            State State = new State();
             if (id.HasValue)
             {
-                EmployeeDto = Empdblist.GetById(id.Value);
+                State = StateLIst.GetById(id.Value);
 
             }
 
 
 
-            return View(EmployeeDto);
+            return View(State);
         }
         [HttpPost]
-        public ActionResult addEdit(EmployeeDto model)
+        public ActionResult addEdit(State model)
 
         {
             if (model.Id == 0)
             {
-                Empdblist.Add(model);
+                StateLIst.Add(model);
             }
             else
             {
-                Empdblist.Update(model.Id, model);
+                StateLIst.Update(model.Id, model);
             }
             return RedirectToAction("Index");
         }
@@ -59,7 +51,7 @@ namespace Demo1.Controllers
 
             if (id.HasValue)
             {
-                Empdblist.Delete(id.Value);
+                StateLIst.Delete(id.Value);
 
 
             }
