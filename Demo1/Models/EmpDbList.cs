@@ -18,7 +18,9 @@ namespace Demo1.Models
                 DOB=new DateTime(1997,8,15),
                 Gender= "female",
                 IsActive= true, 
-                Department= 1
+                Department= 1,
+                StateId=1,
+                CityId=1,
 
             });
 
@@ -29,7 +31,10 @@ namespace Demo1.Models
                  DOB =new DateTime(2026,9,17),
                 Gender = "female",
                 IsActive = true,
-                Department = 2
+                Department = 2,
+                CityId=2,
+                StateId=2,
+
             });
         }
         public static void Add(EmployeeDto EmployeeDto)

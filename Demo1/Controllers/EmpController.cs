@@ -15,6 +15,8 @@ namespace Demo1.Controllers
             var allItem = Empdblist.GetAll();
             allItem.ForEach(x => {
                 x.DepartmentName = Departmentlist.GetById(x.Department).Name;
+                x.StateName = StateLIst.GetById(x.StateId).Name;
+                x.CityName = Citylist.GetById(x.CityId).Name;
             });
             return View(allItem);
         }

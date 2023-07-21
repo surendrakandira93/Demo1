@@ -14,5 +14,9 @@ namespace Demo1.Models
         public int Department { get; set; }
         public string DepartmentName { get; set; }
         public bool IsActive { get; set; } 
+        public string StateName { get; set; }   
+        public string CityName { get; set; } 
+        public int StateId { get; set; }
+        public int CityId { get; set; }
     }
 }
